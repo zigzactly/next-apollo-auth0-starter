@@ -1,0 +1,1 @@
+export default () => <div>next-apollo-auth0-starter</div>
