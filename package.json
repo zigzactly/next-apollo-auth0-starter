@@ -26,6 +26,7 @@
   "homepage": "https://github.com/zigzactly/next-apollo-auth0-starter#readme",
   "dependencies": {
     "apollo-boost": "^0.1.4",
+    "dotenv": "^5.0.1",
     "graphql": "^0.13.2",
     "graphql-tag": "^2.9.1",
     "next": "^5.1.0",
