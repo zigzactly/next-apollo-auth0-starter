@@ -8,3 +8,4 @@ This project uses:
 * Apollo GraphQL 
 * Rebass extended with Styled Components 
 * Auth0
+* Storybook

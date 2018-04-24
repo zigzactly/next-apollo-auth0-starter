@@ -14,6 +14,7 @@ injectGlobal`
     margin: 0; 
     background-color: ${backgroundColor};
     color: ${fontColor};
+    line-height: calc(16/9 * 1em);
   }
 `
 

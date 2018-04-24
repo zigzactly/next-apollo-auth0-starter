@@ -8,4 +8,6 @@ export const H1 = Heading.extend`
 
 export const P = Text.extend`
     font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: normal;
 `
