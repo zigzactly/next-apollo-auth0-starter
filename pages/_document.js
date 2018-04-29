@@ -12,7 +12,8 @@ injectGlobal`
   * { box-sizing: border-box; }
   body { 
     margin: 0; 
-    background-color: ${backgroundColor};
+    // background-color: ${backgroundColor};
+    background-color: white;
     color: ${fontColor};
     line-height: calc(16/9 * 1em);
   }

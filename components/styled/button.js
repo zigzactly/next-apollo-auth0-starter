@@ -2,6 +2,12 @@
 
 import { Button, Link } from 'rebass'
 
+export const FeaturedButton = props => (
+    <Link href={props.href} target={props.newTab ? "_blank": null}>
+        <FeaturedButtonStyled children={props.text} />
+    </Link>
+)
+
 export const AcceptButton = props => (
     <Link href={props.href} target={props.newTab ? "_blank": null}>
         <AcceptButtonStyled children={props.text} />
@@ -14,12 +20,19 @@ export const CancelButton = props => (
     </Link>
 )
 
-const AcceptButtonStyled = Button.extend`
-    background-color: #204a56;
-    color: #dcb2a6;
+const DefaultButtonStyled = Button.extend`
+    color: white;
     margin: 0.75rem 0.25rem;
 `
 
-const CancelButtonStyled = Button.extend`
-    background-color: Thistle;
+const AcceptButtonStyled = DefaultButtonStyled.extend`
+    background-color: green;
+`
+
+const CancelButtonStyled = DefaultButtonStyled.extend`
+    background-color: darkred;
+`
+
+const FeaturedButtonStyled = DefaultButtonStyled.extend`
+    background-color: #204a56;
 `
