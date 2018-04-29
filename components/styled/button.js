@@ -2,37 +2,42 @@
 
 import { Button, Link } from 'rebass'
 
-export const FeaturedButton = props => (
-    <Link href={props.href} target={props.newTab ? "_blank": null}>
-        <FeaturedButtonStyled children={props.text} />
-    </Link>
-)
+const withLink = (props, children) => {
+    return (
+        <LinkStyled href={props.href} target={props.newTab ? "_blank": null}>
+            {children}
+        </LinkStyled>
+    )
+}
 
-export const AcceptButton = props => (
-    <Link href={props.href} target={props.newTab ? "_blank": null}>
-        <AcceptButtonStyled children={props.text} />
-    </Link>
-)
+export const FeaturedButtonLink = props => {
+    return withLink(props, <FeaturedButton link children={props.children} />)
+}
 
-export const CancelButton = props => (
-    <Link href={props.href} target={props.newTab ? "_blank": null}>
-        <CancelButtonStyled children={props.text} />
-    </Link>
-)
+export const CancelButtonLink = props => {
+    return withLink(props, <CancelButton link children={props.children} />)
+}
 
-const DefaultButtonStyled = Button.extend`
+const LinkStyled = Link.extend`
+    cursor: pointer;
+    `
+    
+const DefaultButton = Button.extend`
     color: white;
+    border-radius: 7px;
     margin: 0.75rem 0.25rem;
+
+    cursor: ${props => props.link && 'pointer'};
 `
 
-const AcceptButtonStyled = DefaultButtonStyled.extend`
+export const AcceptButton = DefaultButton.extend`
     background-color: green;
 `
 
-const CancelButtonStyled = DefaultButtonStyled.extend`
+export const CancelButton = DefaultButton.extend`
     background-color: darkred;
 `
 
-const FeaturedButtonStyled = DefaultButtonStyled.extend`
+export const FeaturedButton = DefaultButton.extend`
     background-color: #204a56;
 `

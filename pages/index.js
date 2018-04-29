@@ -7,7 +7,7 @@ import {
 } from 'rebass'
 
 import { 
-    AcceptButton, CancelButton,
+    FeaturedButtonLink,
     H1, P 
 } from '../components/styled' 
 
@@ -17,12 +17,12 @@ const Index = props => {
             <Flex flexWrap="wrap">
                 <Box p={3}>
                     <H1 children="next-apollo-auth0-starter" />
-                    <AcceptButton newtab text="NextJS" href="https://github.com/zeit/next.js/" target="_blank" />
-                    <AcceptButton text="Apollo" href="https://www.apollographql.com/docs/react/" />
-                    <AcceptButton text="Auth0" href="https://auth0.com/" />
-                    <AcceptButton text="Style Components" />
-                    <AcceptButton text="Rebass" />
-                    <AcceptButton text="Storybook" />
+                    <FeaturedButtonLink newTab children="NextJS" href="https://github.com/zeit/next.js/" />
+                    <FeaturedButtonLink newTab children="Apollo" href="https://www.apollographql.com/docs/react/" />
+                    <FeaturedButtonLink newTab children="Auth0" href="https://auth0.com/" />
+                    <FeaturedButtonLink newTab children="Styled Components" href="https://github.com/styled-components/styled-components" />
+                    <FeaturedButtonLink newTab children="Rebass" href="https://github.com/jxnblk/rebass" />
+                    <FeaturedButtonLink newTab children="Storybook" href="https://storybook.js.org/" />
                     <Panel color='inherit' bg="transparent" mt={2}>
                         <Panel.Header
                             color='inherit'
